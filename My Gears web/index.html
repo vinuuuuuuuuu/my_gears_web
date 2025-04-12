@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Gears</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      background-image: url('your-image.jpg');
+      /* Replace with your image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #00ffcc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: rgba(34, 34, 34, 0.85);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00ffcc;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 16px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .gear-item {
+      background: rgba(26, 26, 26, 0.9);
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s;
+      flex: 1 1 calc(50% - 20px);
+      /* 2 per row */
+      max-width: calc(50% - 20px);
+      /* Ensures only 2 products per row */
+      box-sizing: border-box;
+    }
+
+    .gear-item:hover {
+      transform: scale(1.02);
+      background-color: rgba(42, 42, 42, 0.95);
+    }
+
+    .gear-item img {
+      width: 150px;
+      border-radius: 10px;
+    }
+
+    .gear-item div {
+      flex: 1;
+    }
+
+    .gear-item h3 {
+      margin: 0;
+      color: #00ffcc;
+      font-size: 20px;
+    }
+
+    .gear-item p {
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(34, 34, 34, 0.85);
+      margin-top: auto;
+      /* Makes sure the footer stays at the bottom */
+    }
+
+    a {
+      color: #00ffcc;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 900px) {
+      .gear-item {
+        flex: 1 1 calc(50% - 20px);
+        /* 2 per row on medium screens */
+        max-width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gear-item {
+        flex: 1 1 100%;
+        /* 1 per row on smaller screens */
+        max-width: 100%;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      header p {
+        font-size: 14px;
+      }
+
+      .gear-item h3 {
+        font-size: 18px;
+      }
+
+      .gear-item p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#gear">Gears</a>
+    <a href="#footer">Contact</a>
+  </nav>
+
+  <header>
+    <h1>My Gears</h1>
+    <p>All the tools I use to create my YouTube content!</p>
+  </header>
+
+  <!-- First Product Row -->
+  <div id="gear" class="container">
+    <a href="1.html" class="gear-item">
+      <img src="iphone.jpg" alt="I PHONE 13">
+      <div>
+        <h3>I PHONE 13</h3>
+        <p>Perfect for vlogging with great autofocus and 4K quality.</p>
+      </div>
+    </a>
+
+    <a href="2.html" class="gear-item">
+      <img src="phone2.jpg" alt="HUAWEI Y7A">
+      <div>
+        <h3>HUAWEI Y7A</h3>
+        <p>Great backup phone for mobile shots.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Second Product Row -->
+  <div class="container">
+    <a href="3.html" class="gear-item">
+      <img src="pc.jpg" alt="PC">
+      <div>
+        <h3>PC</h3>
+        <p>Powerful editing rig for video and graphics work.</p>
+      </div>
+    </a>
+
+    <a href="4.html" class="gear-item">
+      <img src="gimble.jpg" alt="DJI OSMO MOBILE SE">
+      <div>
+        <h3>DJI OSMO MOBILE SE</h3>
+        <p>Sturdy and lightweight Gimble for stable shooting.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Third Product Row -->
+  <div class="container">
+    <a href="5.html" class="gear-item">
+      <img src="mic.jpg" alt="Mic">
+      <div>
+        <h3>Microphone</h3>
+        <p>Clear and professional audio for my videos.</p>
+      </div>
+    </a>
+
+    <a href="6.html" class="gear-item">
+      <img src="drone.jpg" alt="DJI OSMO MOBILE SE">
+      <div>
+        <h3>L900 Pro GPS Drone Camera</h3>
+        <p>L900 Pro Drone GPS 4K HD Dual Camera Drone</p>
+      </div>
+    </a>
+  </div>
+
+  <footer id="footer">
+    <p>Subscribe to my channel: <a href="https://youtube.com/@vinutechhub" target="_blank">VinutechHub</a></p>
+  </footer>
+</body>
+
+</html>
